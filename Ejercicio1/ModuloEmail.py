@@ -2,10 +2,10 @@ import string
 
 
 class Email:
-    __idDeCuenta: string
-    __dominio:string
-    __tipoDeDominio:string
-    __contraseña:string
+    __idDeCuenta= string
+    __dominio= string
+    __tipoDeDominio= string
+    __contraseña= string
 
     def __init__(self,id ="vacio",dominio = "vacio",tipoDedominio = "vacio",contra = "vacio"):
         self.__idDeCuenta = id

@@ -15,7 +15,7 @@ class ViajeroFrecuente:
         self.__apellido = apellido
         self.__millas_acum = int(millas_acumuladas)
 
-    def cantidadTotalMillas(self):
+    def cantidadTotaldeMillas(self):
         return self.__millas_acum
     
     def acumularMillas(self, cantidadMillas):
@@ -24,11 +24,13 @@ class ViajeroFrecuente:
     
     def canjearMillas(self, cantidadMillas):
         if(cantidadMillas <= self.__millas_acum):
-            print("Millas acumuladas")
             self.__millas_acum -= cantidadMillas
         else:
             print("Cantidad Insuficiente de millas acumuladas")   
         return self.__millas_acum
 
     def muestra(self):
-        return str(self.__num_viajero) +" "+ self.__dni + self.__nombre + self.__apellido + str(self.__millas_acum)
+        return str(self.__num_viajero) +" "+ self.__dni + " " + self.__nombre + " " + self.__apellido + " " +str(self.__millas_acum)
+    
+    def getNumeroViajero(self):
+        return self.__num_viajero
