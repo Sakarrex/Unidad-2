@@ -43,4 +43,8 @@ if __name__ == "__main__":
                 print("Codigo incorrecto")
             print("Ingresar opción: \n a: Consultar cantidad de millas \n b: Acumular millas \n c: Canjear Millas \n d: Finalizar")
             switch = input()
-##memoria????
+
+    print("Drirección de memoria ListaViajeros: {}".format(hex(id(ListaViajeros))))
+    j = 0
+    for j in range(len(ListaViajeros)):
+        print("Dirección de memoria ListaViajeros {}: {}".format(j,hex(id(ListaViajeros[j]))))
