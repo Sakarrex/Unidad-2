@@ -14,9 +14,11 @@ if __name__ == "__main__":
         __RegistroDia.append(__RegistroHora)
     archivo.close
 
-    i= 0
-
+    i=0
+    j=0
     for i in range(len(__RegistroDia)):
-        print("Dia{}".format(__RegistroDia[i]))
+        print("Dia: {}".format(__RegistroDia[i]))
+        for j in range(len(__RegistroHora)):
+            print("Hora: {}, Temperatura: {}, Humedad: {}, Presión: {}".format(__RegistroHora[j],__RegistroHora[j+1].getTemperatura(),__RegistroHora[j+1].getHumedad(),__RegistroHora[j+1].getPresion()))
         ##print("Dia: {} Hora: {} Temperatura: {} Humedad: {} Presion: {}".format(__RegistroDia[0],__RegistroDia[1][0],__RegistroDia[1][1].getTemperatura,__RegistroDia[1][1].getHumedad,__RegistroDia[1][1].getPresion))
         ##
