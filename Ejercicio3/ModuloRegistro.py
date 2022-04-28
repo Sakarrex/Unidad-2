@@ -8,10 +8,24 @@ class Registro:
         self.__presiónAtmosferica = int(presion)
     
     def getTemperatura(self):
-        return str(self.__temperatura)
+        return int(self.__temperatura)
 
     def getHumedad(self):
-        return str(self.__humedad)
+        return int(self.__humedad)
     
     def getPresion(self):
-        return str(self.__presiónAtmosferica)
+        return int(self.__presiónAtmosferica)
+    
+    def getVariable(self, variable):
+        __x = int
+        if variable == 1:
+           __x = self.getTemperatura()
+        elif variable == 2:
+            __x = self.getHumedad()
+        elif variable == 3:
+            __x = self.getPresion()
+        else:
+            __x = -9999999
+        return int(__x)
+        
+
