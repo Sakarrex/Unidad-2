@@ -1,60 +1,64 @@
 from ModuloVentana import Ventana
 
-if __name__ == "__main__":
-    if __name__ ==  '__main__':
+def test():
+    VentanaPrueba = Ventana("Ventana Prueba", 200, 200, 300, 300)
+    VentanaPrueba.mostrar()
 
-        print('==== Ventana Inicio ====')
 
-        ventanaInicio= Ventana('Inicio')
+if __name__ ==  '__main__':
+    test()
+    print('==== Ventana Inicio ====')
 
-        ventanaInicio.mostrar()
+    ventanaInicio= Ventana('Inicio')
 
-        print('Ventana: {} Alto: {} Ancho: {}'.format(ventanaInicio.getTitulo(),ventanaInicio.alto(),ventanaInicio.ancho()))
+    ventanaInicio.mostrar()
 
-        print('==== Ventana Cargar ====')
+    print('Ventana: {} Alto: {} Ancho: {}'.format(ventanaInicio.getTitulo(),ventanaInicio.alto(),ventanaInicio.ancho()))
 
-        ventanaCargar= Ventana('Cargar',10,20)
+    print('==== Ventana Cargar ====')
 
-        ventanaCargar.mostrar()
+    ventanaCargar= Ventana('Cargar',10,20)
 
-        print('*** Mueve a la derecha ***')
+    ventanaCargar.mostrar()
 
-        ventanaCargar.moverDerecha(10)
+    print('*** Mueve a la derecha ***')
 
-        ventanaCargar.mostrar()
+    ventanaCargar.moverDerecha(10)
 
-        print('*** Mueve a la izquierda ***')
+    ventanaCargar.mostrar()
 
-        ventanaCargar.moverIzquierda(10)
+    print('*** Mueve a la izquierda ***')
 
-        ventanaCargar.mostrar()
+    ventanaCargar.moverIzquierda(10)
 
-        print('*** Bajar ***')
+    ventanaCargar.mostrar()
 
-        ventanaCargar.bajar(10)
+    print('*** Bajar ***')
 
-        ventanaCargar.mostrar()
+    ventanaCargar.bajar(10)
 
-        print('==== Ventana Borrar ====')
+    ventanaCargar.mostrar()
 
-        ventanaBorrar = Ventana('Borrar', 10,20,100,200)
+    print('==== Ventana Borrar ====')
 
-        ventanaBorrar.mostrar()
+    ventanaBorrar = Ventana('Borrar', 10,20,100,200)
 
-        print('*** Subir ***')
+    ventanaBorrar.mostrar()
 
-        ventanaBorrar.subir(5)   
+    print('*** Subir ***')
 
-        ventanaBorrar.mostrar()
+    ventanaBorrar.subir(5)   
 
-        print('*** Subir ***')
+    ventanaBorrar.mostrar()
 
-        ventanaBorrar.subir()
+    print('*** Subir ***')
 
-        ventanaBorrar.mostrar()
+    ventanaBorrar.subir()
 
-        print('*** Bajar ***')
+    ventanaBorrar.mostrar()
 
-        ventanaBorrar.bajar()
+    print('*** Bajar ***')
 
-        ventanaBorrar.mostrar()
+    ventanaBorrar.bajar()
+
+    ventanaBorrar.mostrar()

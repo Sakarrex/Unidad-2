@@ -2,8 +2,14 @@ from csv import reader
 import csv
 from ModuloPlanAhorro import PlandeAhorro
 
+def test():
+    PlanDePrueba = PlandeAhorro(100,"Ford","Focus",100000)
+    print(PlanDePrueba)
+
 if __name__ == "__main__":
 
+    test() 
+    
     ListaPlanes = []
     valor = int
     archivo = open("c:\\Users\\Usuario\\Desktop\\POO\\Unidad-2\\Ejercicio5\\planes.csv")

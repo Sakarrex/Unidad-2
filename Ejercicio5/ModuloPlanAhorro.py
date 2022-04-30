@@ -15,6 +15,9 @@ class PlandeAhorro:
         self.__versionVehiculo = str(version)
         self.__valorVehiculo = int(valor)
     
+    def __str__(self):
+        return "Codigo: {}, Modelo: {}, Version: {}, Valor:{}, Cantidad de cuotas: {}, Cantidad de cuotas licitas: {}".format(self.__codigo,self.__modeloVehiculo,self.__versionVehiculo,self.__valorVehiculo,PlandeAhorro.__cantidadCuotasPlan,PlandeAhorro.__cantidadDeCoutasLicitas)
+    
     def getCodigo(self):
         return self.__codigo
     

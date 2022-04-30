@@ -4,8 +4,14 @@ from csv import reader
 import csv
 from ModuloRegistro import Registro
 
+def test():
+    Registroprueba = Registro(10,20,5)
+    print(Registroprueba)
+
 if __name__ == "__main__":
     
+    test()
+
     __RegistroMes = []
     cantidadDias=2
     for i in range(cantidadDias):
@@ -19,11 +25,7 @@ if __name__ == "__main__":
         __RegistroMes[x].append(__RegistroHora)
     archivo.close
 
-    #i = 0
-    #j = 0
-    #for i in range(len(__RegistroMes)):
-    #    for j in range(len(__RegistroMes[i])):
-    #        print("Dia: {}, Hora: {}, Temperatura: {}, Humedad: {}, Presion: {}".format(i+1,j,__RegistroMes[i][j].getTemperatura(),__RegistroMes[i][j].getHumedad(),__RegistroMes[i][j].getPresion()))    
+
     print("Seleccionar opcion: \n 1: Para cada variable el día y hora de menor y mayor valor. \n 2: temperatura promedio mensual por cada hora. \n 3: Listado de valores para un día dado")
     switch = int(input())
     while switch != 4:

@@ -12,6 +12,16 @@ if __name__ == "__main__":
         ListaViajeros.append(ViajeroFrecuente(int(lines[0]),lines[1],lines[2],lines[3],int(lines[4])))
     archivo.close
 
+    print(645 == ListaViajeros[0])
+    print(ListaViajeros[0] == 100)
+
     print("Millas viajero {}: {}".format(ListaViajeros[0].getNumeroViajero(),ListaViajeros[0].cantidadTotaldeMillas()))
 
     100 + ListaViajeros[0]
+
+    print("Millas viajero {}: {}".format(ListaViajeros[0].getNumeroViajero(),ListaViajeros[0].cantidadTotaldeMillas()))
+
+    100 - ListaViajeros[0]
+    
+    print("Millas viajero {}: {}".format(ListaViajeros[0].getNumeroViajero(),ListaViajeros[0].cantidadTotaldeMillas()))
+

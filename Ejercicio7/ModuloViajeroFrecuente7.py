@@ -40,23 +40,28 @@ class ViajeroFrecuente:
             return self.__millas_acum > otro.__millas_acum
     
     def __eq__(self, otro):
-        return
+        if type(otro) == int:
+            return otro == self.__millas_acum
+    
+
 
     def __add__(self, otro):
         if type(otro) == int:
-            self.__millas_acum += otro
+          self.__millas_acum += otro
     
-    def _radd_(self,otro):
+    def __radd__(self,otro):
         if type(otro) == int:
-            self
+            self.__add__(otro)
    
     def __sub__(self,otro):
         if type(otro) == int:
-           return self.__millas_acum - otro
+            if(otro < self.__millas_acum):
+                self.__millas_acum -= otro
+            
 
     def __rsub__(self,otro):
         if type(otro) == int:
-            return otro - self.__millas_acum
+            self.__sub__(otro)
     
 
   
