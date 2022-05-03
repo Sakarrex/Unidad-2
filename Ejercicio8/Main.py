@@ -2,21 +2,33 @@
 from ModuloConjunto import Conjunto
 
 if __name__ == "__main__":
-    conjunto1 = Conjunto(4)
-    conjunto2 = Conjunto(5)
+    conjunto1 = Conjunto()
+    conjunto2 = Conjunto()
 
-    for i in range(conjunto1.getTamano()):
-        print("tamaño: {}".format(conjunto1.getlen()))
-        conjunto1.agregarValor(int(input("Ingresar valor conjunto 1: ")))
+    for i in range(int(input("tamaño conjunto 1 : "))):
+        x = int(input("Ingresar valor conjunto 1: "))
+        conjunto1.agregarValor(x)
     
-    for j in range(conjunto2.getTamano()):
-        print("tamaño: {}".format(conjunto2.getlen()))
+    print(conjunto1.getConjunto())
+
+    for j in range(int(input("tamaño conjunto 2: "))):
         conjunto2.agregarValor(int(input("Ingresar valor conjunto 2: ")))
 
-    unionConjunto = conjunto1+conjunto2
+    print(conjunto2.getConjunto())
+    
+    unionConjunto = conjunto1 + conjunto2
 
-    for i in range(len(unionConjunto)):
-        print(unionConjunto[i])
+    print("conjunto union: {}".format(unionConjunto))
 
-# Conjunto 1 = {1,2,5,6}
+    unionDiferencia = conjunto1 - conjunto2
+
+    print("Conjunto diferencia {}".format(unionDiferencia))
+    
+    if(conjunto1 == conjunto2):
+        print("Son iguales")
+    else:
+        print("Son distintos")
+   
+#
+# Conjunto 1 = {1,3,2,5,6,7}
 # Conjunto 2 = {2,5,6,7,8}
