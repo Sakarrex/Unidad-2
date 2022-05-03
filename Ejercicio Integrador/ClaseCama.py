@@ -19,6 +19,10 @@ class Cama:
         self.__fechaDeInternacion = str(fechaDeInternacion)
         self.__fechaDeAlta = str(fechaDeAlta)
     
+    def __str__(self):
+        return "IdCama: {}\nHabitacion: {}\nNombre y apellido: {}\nDiagnostico: {}\nFecha de Internacion: {}".format(self.__idCama,self.__habitacion,self.__apellidoNombre,self.__diagnostico,self.__fechaDeInternacion)
+
+
     def getNombre(self):
         return self.__apellidoNombre
     
@@ -33,3 +37,12 @@ class Cama:
     
     def getFechaDeInternacion(self):
         return self.__fechaDeInternacion
+    
+    def ActualizarAlta(self,alta):
+        self.__fechaDeAlta = alta
+
+    def getAlta(self):
+        return self.__fechaDeAlta
+    
+    def getEstado(self):
+        return self.__estado

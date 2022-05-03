@@ -18,3 +18,18 @@ class Medicamento:
     
     def getNombreComercial(self):
         return self.__nombreComercial
+
+    def getMonodroga(self):
+        return self.__Monodroga
+    
+    def getPresentacion(self):
+        return self.__Presentacion
+    
+    def getCantidad(self):
+        return self.__cantidadAplicada
+    
+    def getPrecio(self):
+        return self.__PrecioTotal
+    
+    def getIdcama(self):
+        return self.__idCama

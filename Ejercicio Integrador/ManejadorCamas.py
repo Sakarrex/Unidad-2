@@ -17,7 +17,7 @@ for files in __reader:
         banderaLectura = not banderaLectura
     else:
         UnaCama = Cama(files[0],files[1],files[2],files[3],files[4],files[5],files[6])
-        __ArregloCamas[files[0]-1] = UnaCama
+        __ArregloCamas[int(files[0])-1] = UnaCama
         
 
 __archivo.close
@@ -34,11 +34,29 @@ def getCamaNombre(Nombre):
         camaADevolver = __ArregloCamas[i-1]
     return camaADevolver
 
-def DarDeAlta(Nombre):
+def DarDeAlta(Nombre, Alta):
     CamaDeALta = getCamaNombre(Nombre)
-    IdDecama = CamaDeALta.getIdCama()
+    
     ListaMedicamentos = ManejadorMedicamentos.getListaDeMedicamentos()
+    TotalAdeudado = 0
     if(CamaDeALta != None):
-        print("Paciente: {}          Cama:{}    Habitacion:{}\nDiagnostico: {}       Fecha De Internaion: {}".format(CamaDeALta.getNombre(),CamaDeALta.getIdCama(),CamaDeALta.getHabitacion(),CamaDeALta.getDiagnostico(),CamaDeALta.getFechaDeInternacion()))
-        for i in range(len(ListaMedicamentos[IdDecama-1])):
-            print(ListaMedicamentos[IdDecama-1][i].getNombreComercial())
+        IdDecama = CamaDeALta.getIdCama()
+        CamaDeALta.ActualizarAlta(Alta)
+        
+        print("Paciente: {}          Cama:{}    Habitacion:{}".format(CamaDeALta.getNombre(),CamaDeALta.getIdCama(),CamaDeALta.getHabitacion()))
+        print("Diagnostico: {}       Fecha De Internaion: {}".format(CamaDeALta.getDiagnostico(),CamaDeALta.getFechaDeInternacion()))
+        print("Fecha de alta: " + CamaDeALta.getAlta())
+        print("Medicamento/monodroga       Presentacion         Cantidad       Precio")
+        for i in range(len(ListaMedicamentos)):
+            if ListaMedicamentos[i].getIdcama() == IdDecama:
+                print("{}/{}        {}             {}         {}".format(ListaMedicamentos[i].getNombreComercial(),ListaMedicamentos[i].getMonodroga(),ListaMedicamentos[i].getPresentacion(),ListaMedicamentos[i].getCantidad(),ListaMedicamentos[i].getPrecio()))
+                TotalAdeudado += ListaMedicamentos[i].getPrecio() * ListaMedicamentos[i].getCantidad()
+        print("Total adeudado:                                 {}".format(TotalAdeudado))
+    else:
+        print("cama no encontrada")
+
+def ListarDiagnostico(Diagnostico):
+    for i in range(len(__ArregloCamas)):
+        
+        if (__ArregloCamas[i].getEstado() == True) and (__ArregloCamas[i].getDiagnostico() == Diagnostico):
+            print(__ArregloCamas[i])
